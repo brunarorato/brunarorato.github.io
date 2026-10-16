@@ -8,6 +8,24 @@
 ## Contexto e objetivo
 Eventos digitais podem deixar de registrar interações corretamente ou apresentar quedas e altas abruptas de volume. Uma detecção tardia compromete a leitura do funil de conversão e a atuação das equipes responsáveis. O objetivo foi construir um **alerta diário automatizado**, com indicadores de desvios e sinais de persistência.
 
+## Números e evidências do projeto
+
+| Evidência | Informação | Interpretação correta |
+|---|---|---|
+| Identificação antes da automação | **Cerca de 14 dias** em um incidente histórico de falha de tagueamento | Um caso que motivou o projeto, **não** uma média de incidentes anteriores |
+| Frequência depois da implantação | **Diária**, com dados **D-1** e alerta enviado entre **8h e 8h30** | Rotina de visibilidade e triagem diária; **não** detecção de eventos em tempo real |
+| Regra de monitoramento | **D-1 comparado a D-8** e desvio **superior a ±20%** | Parâmetro técnico de sinalização, **não** percentual de melhoria |
+| Radar de Persistência | Histórico de até **30 dias** | Janela analítica da regra, **não** tempo de resolução |
+| Fluxo de resposta | Grupo colaborativo no **Microsoft Teams**, com menção direta às equipes responsáveis | Possibilidade de iniciar a triagem após o alerta, sem comprovação de SLA numérico |
+
+A escolha de um grupo colaborativo, em vez de um canal somente de disparos, ajudou a transformar o alerta em uma discussão operacional: o time analisava os outliers recebidos pela manhã e acionava diretamente os responsáveis por instrumentação e outros tipos de falha. Posteriormente, a **Genie de monitoria** permitiu aprofundar investigações por dispositivo, bandeira, campanha/canal, tipo de erro, evento e página.
+
+### O que não podemos afirmar quantitativamente
+
+Uma comparação **hipotética** entre um caso de 14 dias e uma detecção em 1 dia dá `(14 - 1) / 14 × 100 = 92,9%`. **Esse percentual não foi medido após a implantação** e não deve ser descrito como redução realizada. A rotina D-1 não é *real time*: o momento do evento, o processamento da fonte e o horário diário do disparo influenciam quando o alerta pode aparecer.
+
+O projeto é demonstrado publicamente sem expor investimentos financeiros internos, detalhes de incidentes de segurança ou informação confidencial da empresa.
+
 ## Responsabilidades e implementação profissional
 1. **Base analítica:** organização dos volumes de eventos por data, hora, evento e dispositivo. A preparação do notebook inclui carga inicial e atualização das partições/dias recentes.
 2. **Regras de detecção em SQL:** comparação de **D-1 com D-8**, o mesmo dia da semana anterior. Um evento/dispositivo passa a ser sinalizado quando o desvio absoluto é **superior a 20%**.
