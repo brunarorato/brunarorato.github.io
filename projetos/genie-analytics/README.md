@@ -39,8 +39,12 @@ Ambas as soluções utilizam **a mesma origem de dados GA4**, mas foram constru�
 - [Entenda a origem: monitoria diária e alertas Teams](../monitoria-ga4/).
 - As consultas SQL e as instruções disponibilizadas nesta pasta são **exemplos fictícios**, não exports de nenhum dos notebooks.
 
-### Perfil de clientes e análises comerciais
-Perguntas sobre perfil, evolução, pedidos e campanhas. Durante testes de comparação comercial, respostas preliminares divergentes exigiram revisão do contexto e das consultas do agente; **não devem ser tratadas como métricas finais**.
+### Perfil de clientes e análises comerciais — iniciativa própria
+A Genie de Perfil de Clientes foi criada proativamente após a identificação de uma lacuna no acompanhamento de Customer Analytics, a partir da experiência anterior em CRM. Ela permite análises exploratórias de ciclo de vida, recompra, LTV, perfil, produtos, opt-in e comparações sazonais. A solução foi disponibilizada a áreas como Marketing e Diretoria de Canais, conforme solicitação de acesso.
+
+A criação de uma tabela reutilizável de feriados e datas comemorativas foi outra entrega importante, usada nas construções analíticas da autora. Durante testes de comparação comercial, respostas preliminares divergentes exigiram revisão do contexto e das consultas do agente; **não devem ser tratadas como métricas finais**.
+
+- [Ver o case dedicado de Genie de Perfil de Clientes](../genie-perfil-clientes/).
 
 ## Arquivos didáticos
 - [modelo_metricas.yaml](modelo_metricas.yaml): especificação ilustrativa de dimensões e medidas (**não é um arquivo para deploy direto no Databricks**).
