@@ -4,6 +4,7 @@ Portfólio profissional com estudos de caso sobre:
 
 - Monitoria automatizada de eventos GA4 e observabilidade digital
 - Databricks Genie Agents e métricas de negócio
+- Genie de Perfil de Clientes — Customer Analytics criado por iniciativa própria
 - Validação iterativa de respostas geradas por IA
 - Engenharia analítica e dashboards Power BI de ponta a ponta
 - Documentação técnica e governança
@@ -25,7 +26,8 @@ Os estudos de caso do [portfólio online](https://brunarorato.github.io) têm do
 | Projeto | Material público |
 |---|---|
 | Monitoria diária GA4 → evolução para Genie de monitoria | [README, SQL, Python e alerta HTML demonstrativo](projetos/monitoria-ga4/) |
-| Databricks Genie Agents | [README, SQL e demonstração da camada de métricas](projetos/genie-analytics/) |
+| Databricks Genie Agents e monitoria | [README, SQL e demonstração da camada de métricas](projetos/genie-analytics/) |
+| Genie de Perfil de Clientes | [Case de Customer Analytics, cenários e calendário SQL fictício](projetos/genie-perfil-clientes/) |
 | Power BI ponta a ponta — PDP e Vitrines | [README, SQL, DAX e modelagem conceitual](projetos/powerbi-pdp-vitrines/) |
 
 **Importante:** os códigos demonstrativos, números, fontes e arquiteturas foram generalizados. Não são exports, backups, capturas ou código-fonte corporativo.
