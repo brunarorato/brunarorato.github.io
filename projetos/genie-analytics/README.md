@@ -29,8 +29,15 @@ flowchart LR
 ~~~
 
 ## Dois cenários de aplicação
-### Monitoria de eventos digitais
-Perguntas sobre alterações no volume de eventos, diferenças entre dispositivos, jornada de conversão e possíveis anomalias.
+### Genie de monitoria — evolução dos alertas diários no Teams
+A **monitoria diária de eventos GA4**, com detecção de desvios em SQL e alertas HTML encaminhados ao Microsoft Teams por Power Automate, veio **antes** da Genie de monitoria.
+
+A Genie de monitoria foi uma **consequência e evolução funcional daquela solução**: após estruturar a identificação e o encaminhamento automatizado de possíveis falhas, a proposta passou a incluir exploração dos eventos em linguagem natural para aprofundar dúvidas sobre volumes, dispositivos, conversão e anomalias.
+
+Os trabalhos foram desenvolvidos em **notebooks diferentes**: o notebook da monitoria diária gera os alertas; o notebook da Genie cuida da camada analítica e da configuração do agente. Este portfólio não pressupõe que os dois notebooks usem exatamente as mesmas tabelas ou possuam integração automática entre si.
+
+- [Entenda a origem: monitoria diária e alertas Teams](../monitoria-ga4/).
+- As consultas SQL e as instruções disponibilizadas nesta pasta são **exemplos fictícios**, não exports de nenhum dos notebooks.
 
 ### Perfil de clientes e análises comerciais
 Perguntas sobre perfil, evolução, pedidos e campanhas. Durante testes de comparação comercial, respostas preliminares divergentes exigiram revisão do contexto e das consultas do agente; **não devem ser tratadas como métricas finais**.
