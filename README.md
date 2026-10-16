@@ -12,7 +12,6 @@ Portfólio profissional de Bruna Gaban Rorato com estudos de caso sobre:
 
 🌐 **[Ver meu portfólio profissional](https://brunarorato.github.io)**
 
-O site já está publicado pelo GitHub Pages. O arquivo `index.html` contém a página principal, e os estudos de caso detalhados estão organizados em pastas na seção de projetos abaixo.
 
 ## Observação
 
