@@ -29,7 +29,7 @@ flowchart LR
 ## Evolução do projeto: alertas no Teams → Genie de monitoria
 A **monitoria diária automatizada no Microsoft Teams** foi a primeira solução, voltada à identificação e comunicação de desvios de eventos GA4. A **Genie de monitoria surgiu posteriormente como um desdobramento dessa experiência**, para apoiar a exploração analítica e o aprofundamento das ocorrências por perguntas em linguagem natural.
 
-A Genie foi desenvolvida em **outro notebook**. Portanto, ela **não é uma etapa do job diário de envio de alertas**; trata-se de uma solução posterior e complementar. A relação descrita aqui é de **evolução funcional do projeto**, sem afirmar que ambos compartilham exatamente as mesmas tabelas ou a mesma implementação.
+A **origem dos dados GA4 é a mesma nas duas soluções**, porém **a construção é diferente**: a monitoria diária usa seu próprio notebook e fluxo SQL → Python/HTML → Power Automate/Teams; a Genie de monitoria foi desenvolvida em outro notebook, com preparação analítica, Metric Views e configuração do agente. Portanto, a Genie **não faz parte do job de envio dos alertas**; é uma evolução posterior e complementar. Origem comum não significa necessariamente tabelas intermediárias ou pipelines idênticos.
 
 Leia também o [estudo sobre Genie Agents](../genie-analytics/).
 
