@@ -34,6 +34,11 @@ A **monitoria diária de eventos GA4**, com detecção de desvios em SQL e alert
 
 A Genie de monitoria foi uma **consequência e evolução funcional daquela solução**: após estruturar a identificação e o encaminhamento automatizado de possíveis falhas, a proposta passou a incluir exploração dos eventos em linguagem natural para aprofundar dúvidas sobre volumes, dispositivos, conversão, anomalias **e canais/campanhas de marketing** (por exemplo, CRM, e-mail marketing e parceiros). Esses recortes permitiam investigar o contexto de origem dos eventos, respeitando as regras de identificação de campanhas e atribuição dos dados.
 
+### Agilidade no diagnóstico e no direcionamento da investigação
+Antes da Genie, a identificação do contexto de uma anomalia podia envolver diversas trocas entre áreas: um time solicitava informações sobre dispositivo, bandeira, página, evento e tipo de erro, e outro precisava consultar os dados e responder. Com a Genie de monitoria, essas dimensões e o **Radar de Outliers** passaram a ser consultáveis no próprio agente, apoiados por instruções e consultas SQL de referência.
+
+Isso proporcionou **maior agilidade para diagnosticar e encaminhar ocorrências**, com menos perguntas repetidas e informações mais completas para a equipe responsável. **O tempo de diagnóstico e o tempo de resolução não foram medidos em amostras antes e depois da implantação**. Assim, o impacto é descrito de forma qualitativa, sem atribuir um percentual não validado.
+
 Ambas as soluções utilizam **a mesma origem de dados GA4**, mas foram construídas em **notebooks diferentes**, com transformações e objetivos distintos. O notebook da monitoria diária calcula os alertas e prepara o envio para o Teams; o notebook da Genie prepara a camada analítica e configura o agente para análises em linguagem natural. O compartilhamento da origem não significa que utilizem as mesmas tabelas intermediárias nem que exista integração automática entre os notebooks.
 
 - [Entenda a origem: monitoria diária e alertas Teams](../monitoria-ga4/).
