@@ -32,7 +32,7 @@ flowchart LR
 ### Genie de monitoria — evolução dos alertas diários no Teams
 A **monitoria diária de eventos GA4**, com detecção de desvios em SQL e alertas HTML encaminhados ao Microsoft Teams por Power Automate, veio **antes** da Genie de monitoria.
 
-A Genie de monitoria foi uma **consequência e evolução funcional daquela solução**: após estruturar a identificação e o encaminhamento automatizado de possíveis falhas, a proposta passou a incluir exploração dos eventos em linguagem natural para aprofundar dúvidas sobre volumes, dispositivos, conversão e anomalias.
+A Genie de monitoria foi uma **consequência e evolução funcional daquela solução**: após estruturar a identificação e o encaminhamento automatizado de possíveis falhas, a proposta passou a incluir exploração dos eventos em linguagem natural para aprofundar dúvidas sobre volumes, dispositivos, conversão, anomalias **e canais/campanhas de marketing** (por exemplo, CRM, e-mail marketing e parceiros). Esses recortes permitiam investigar o contexto de origem dos eventos, respeitando as regras de identificação de campanhas e atribuição dos dados.
 
 Ambas as soluções utilizam **a mesma origem de dados GA4**, mas foram construídas em **notebooks diferentes**, com transformações e objetivos distintos. O notebook da monitoria diária calcula os alertas e prepara o envio para o Teams; o notebook da Genie prepara a camada analítica e configura o agente para análises em linguagem natural. O compartilhamento da origem não significa que utilizem as mesmas tabelas intermediárias nem que exista integração automática entre os notebooks.
 
@@ -40,7 +40,7 @@ Ambas as soluções utilizam **a mesma origem de dados GA4**, mas foram constru�
 - As consultas SQL e as instruções disponibilizadas nesta pasta são **exemplos fictícios**, não exports de nenhum dos notebooks.
 
 ### Perfil de clientes e análises comerciais — iniciativa própria
-A Genie de Perfil de Clientes foi criada proativamente após a identificação de uma lacuna no acompanhamento de Customer Analytics, a partir da experiência anterior em CRM. Ela permite análises exploratórias de ciclo de vida, recompra, LTV, perfil, produtos, opt-in e comparações sazonais. A solução foi disponibilizada a áreas como Marketing e Diretoria de Canais, conforme solicitação de acesso.
+A Genie de Perfil de Clientes foi criada proativamente após a identificação de uma lacuna no acompanhamento de Customer Analytics, a partir da experiência anterior em CRM. Ela permite análises exploratórias de ciclo de vida, recompra, LTV, perfil, produtos, opt-in, comparações sazonais **e recortes por canais/campanhas de marketing**, como CRM, e-mail marketing e parceiros. A dimensão de origem de campanha é distinta das preferências e autorizações de comunicação (opt-in). A solução foi disponibilizada a áreas como Marketing e Diretoria de Canais, conforme solicitação de acesso.
 
 A criação de uma tabela reutilizável de feriados e datas comemorativas foi outra entrega importante, usada nas construções analíticas da autora. Durante testes de comparação comercial, respostas preliminares divergentes exigiram revisão do contexto e das consultas do agente; **não devem ser tratadas como métricas finais**.
 
