@@ -1,0 +1,9 @@
+data,evento,dispositivo,quantidade
+2026-09-08,view_item,Desktop,10000
+2026-09-15,view_item,Desktop,5500
+2026-09-08,add_to_cart,App,5000
+2026-09-15,add_to_cart,App,6500
+2026-09-08,begin_checkout,Msite,3000
+2026-09-15,begin_checkout,Msite,2850
+2026-09-08,purchase,Desktop,1200
+2026-09-15,purchase,Desktop,850
