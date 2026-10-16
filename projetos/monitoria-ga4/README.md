@@ -24,6 +24,8 @@ A escolha de um grupo colaborativo, em vez de um canal somente de disparos, ajud
 
 Uma comparação **hipotética** entre um caso de 14 dias e uma detecção em 1 dia dá `(14 - 1) / 14 × 100 = 92,9%`. **Esse percentual não foi medido após a implantação** e não deve ser descrito como redução realizada. A rotina D-1 não é *real time*: o momento do evento, o processamento da fonte e o horário diário do disparo influenciam quando o alerta pode aparecer.
 
+**Distinção importante:** a estimativa retrospectiva de **aproximadamente 75% de redução no tempo de diagnóstico inicial com a Genie de monitoria** refere-se à agilidade da investigação e do encaminhamento **após o alerta**, e não a uma redução mensurada do tempo de detecção da monitoria diária ou do tempo total de resolução. [Confira a explicação no case de Genie Agents](../genie-analytics/).
+
 O projeto é demonstrado publicamente sem expor investimentos financeiros internos, detalhes de incidentes de segurança ou informação confidencial da empresa.
 
 ## Responsabilidades e implementação profissional
