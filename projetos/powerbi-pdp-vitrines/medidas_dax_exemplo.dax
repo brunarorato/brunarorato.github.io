@@ -1,0 +1,20 @@
+// Medidas demonstrativas: pressupõem duas tabelas fictícias
+// com colunas agregadas; não são extrações do PBIX original.
+
+// VITRINES — os dados já estão agregados no grão definido no modelo.
+Impressões = SUM('FatoVitrines'[Impressoes])
+Cliques = SUM('FatoVitrines'[Cliques])
+CTR = DIVIDE([Cliques], [Impressões], 0)
+Adições ao Carrinho = SUM('FatoVitrines'[AdicoesCarrinho])
+Pedidos = SUM('FatoVitrines'[PedidosAtribuidos])
+GMV = SUM('FatoVitrines'[ValorGMVAtribuido])
+Taxa de Conversão de Clique = DIVIDE([Pedidos], [Cliques], 0)
+
+// PDP — exemplo ilustrativo de indicadores da jornada de produto.
+Visualizações PDP = SUM('FatoPDP'[Visualizacoes])
+Cálculos de Frete = SUM('FatoPDP'[CalculosFrete])
+Ocorrências de Erro = SUM('FatoPDP'[OcorrenciasErro])
+Taxa de Uso do Frete = DIVIDE([Cálculos de Frete], [Visualizações PDP], 0)
+
+// As medidas dependem da definição do grão e não podem ser copiadas
+// diretamente para um modelo sem validação de relacionamento e atribuição.
