@@ -17,6 +17,13 @@ Estas são **perguntas fictícias, inspiradas nos temas de negócio relatados**,
 - Como varia o consentimento para WhatsApp, SMS e e-mail por grupo de clientes?
 - Quais perfis apresentam preferências de comunicação diferentes?
 
+## Campanhas e canais de marketing
+- Como varia o perfil dos clientes associados a campanhas de CRM, e-mail marketing e parceiros?
+- Qual é o ticket médio por origem de marketing, quando os dados e as regras de atribuição permitem esse recorte?
+- Quais canais e campanhas estão associados a clientes novos ou recorrentes em um período?
+
+Essas perguntas exploram associações presentes nos dados. **Não implicam que a campanha causou a compra**. Origem de marketing e consentimento de contato (opt-in) são dimensões diferentes.
+
 ## Sazonalidade
 - Quantos clientes novos e recorrentes foram identificados em determinado período de Black Friday?
 - Como mudam a composição e o valor de compras entre datas sazonais?
@@ -26,6 +33,7 @@ Estas são **perguntas fictícias, inspiradas nos temas de negócio relatados**,
 2. Definir explicitamente o período e as regras de churn/pré-churn.
 3. Verificar se o opt-in é vigente na data analisada e qual é o denominador.
 4. Evitar dupla contagem ao juntar pedidos e itens.
-5. Distinguir respostas exploratórias de indicadores validados.
+5. Validar a definição da origem de marketing, o período e o método de atribuição antes de comparar campanhas.
+6. Distinguir respostas exploratórias de indicadores validados.
 
 **Importante:** estes exemplos não representam permissões de acesso para dados pessoais. Resultados públicos devem ser agregados e protegidos.
