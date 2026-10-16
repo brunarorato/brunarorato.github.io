@@ -34,7 +34,7 @@ A **monitoria diária de eventos GA4**, com detecção de desvios em SQL e alert
 
 A Genie de monitoria foi uma **consequência e evolução funcional daquela solução**: após estruturar a identificação e o encaminhamento automatizado de possíveis falhas, a proposta passou a incluir exploração dos eventos em linguagem natural para aprofundar dúvidas sobre volumes, dispositivos, conversão e anomalias.
 
-Os trabalhos foram desenvolvidos em **notebooks diferentes**: o notebook da monitoria diária gera os alertas; o notebook da Genie cuida da camada analítica e da configuração do agente. Este portfólio não pressupõe que os dois notebooks usem exatamente as mesmas tabelas ou possuam integração automática entre si.
+Ambas as soluções utilizam **a mesma origem de dados GA4**, mas foram construídas em **notebooks diferentes**, com transformações e objetivos distintos. O notebook da monitoria diária calcula os alertas e prepara o envio para o Teams; o notebook da Genie prepara a camada analítica e configura o agente para análises em linguagem natural. O compartilhamento da origem não significa que utilizem as mesmas tabelas intermediárias nem que exista integração automática entre os notebooks.
 
 - [Entenda a origem: monitoria diária e alertas Teams](../monitoria-ga4/).
 - As consultas SQL e as instruções disponibilizadas nesta pasta são **exemplos fictícios**, não exports de nenhum dos notebooks.
