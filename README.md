@@ -1,6 +1,6 @@
 # Portfólio — Dados, Analytics & Inteligência Artificial
 
-Portfólio profissional de Bruna Gaban Rorato com estudos de caso sobre:
+Portfólio profissional com estudos de caso sobre:
 
 - Monitoria automatizada de eventos GA4 e observabilidade digital
 - Databricks Genie Agents e métricas de negócio
