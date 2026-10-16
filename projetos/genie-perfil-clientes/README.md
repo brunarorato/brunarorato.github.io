@@ -11,7 +11,7 @@ A experiência anterior em CRM evidenciou uma **lacuna de acompanhamento ativo d
 A solução **não foi uma solicitação formal de outro time**: foi idealizada por iniciativa própria, com base no conhecimento de negócio adquirido durante a atuação anterior em CRM.
 
 ## Minha atuação
-- Definição do escopo e das perguntas de negócio relevantes para entender a carteira de clientes.
+- Definição do escopo e das perguntas de negócio relevantes para entender a carteira de clientes, incluindo a possibilidade de recortes por campanhas e canais de marketing.
 - Preparação, modelagem e organização de dados analíticos para diferentes recortes de comportamento e histórico de compra.
 - Estruturação de medidas e dimensões em **Metric Views** e configuração do **Genie Agent** para exploração em linguagem natural.
 - Criação de instruções, consultas SQL de referência, testes e refinamento de respostas preliminares.
@@ -28,6 +28,7 @@ A solução reúne diversas dimensões e medidas, por exemplo:
 | Histórico temporal | Cadastro, primeira compra, penúltima e última compra |
 | Perfil | Faixa etária, gênero, região, lojas e bandeira de preferência |
 | Comunicação e consentimento | Opt-in e percentuais por WhatsApp, SMS e e-mail |
+| Origem de marketing | Associação a campanhas específicas e canais de marketing, como CRM, e-mail marketing e parceiros, conforme a origem disponível e suas regras de atribuição |
 | Produtos | Categoria, família e produto; preferências e sensibilidade a descontos |
 | Calendário comercial | Comparações sazonais e eventos como Black Friday |
 
@@ -48,14 +49,14 @@ flowchart LR
 Este diagrama é conceitual. Não identifica tabelas, pipelines, permissões nem relacionamentos reais do ambiente corporativo.
 
 ## Aplicação real mencionada
-A Genie passou a apoiar investigações de clientes novos, recorrentes e pré-churn relacionadas a períodos comerciais como **Black Friday**, incluindo recortes de perfil e comportamento de compra.
+A Genie passou a apoiar investigações de clientes novos, recorrentes e pré-churn relacionadas a períodos comerciais como **Black Friday**, incluindo recortes de perfil, comportamento de compra **e informações sobre campanhas e canais de marketing associados aos clientes**. Esses recortes viabilizam exploração de públicos por origem, mas não demonstram, por si só, causalidade ou retorno financeiro de campanhas.
 
 Respostas preliminares em análises comerciais apresentaram inconsistências de segmentação e valores durante os testes; isso motivou **revisão de instruções e consultas SQL**, não uma afirmação de resultados financeiros já homologados.
 
 ## Resultados e impacto — o que é defensável
 - **Nova capacidade analítica criada por iniciativa própria:** uma visão de Customer Analytics que não estava sendo acompanhada ativamente.
 - **Acesso disponibilizado mediante solicitação** a pessoas de Marketing e da Diretoria de Canais.
-- **Maior capacidade de explorar análises sazonais e segmentadas**, inclusive questões antes difíceis de obter em uma consulta manual.
+- **Maior capacidade de explorar análises sazonais, segmentadas e por origem de marketing**, inclusive questões antes difíceis de obter em uma consulta manual.
 - **Reaproveitamento da tabela de calendário comercial** em diferentes construções analíticas.
 - **Ciclo de melhoria de qualidade**, com testes, identificação de divergências e refinamento dos agentes.
 
