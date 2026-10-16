@@ -26,8 +26,14 @@ flowchart LR
     F --> G[Microsoft Teams]
 ~~~
 
-## Três iniciativas distintas
-**Genie de eventos** é um projeto separado, voltado a consultas analíticas em linguagem natural com Metric Views e agentes de IA; não é o mesmo notebook que executa a monitoria.
+## Evolução do projeto: alertas no Teams → Genie de monitoria
+A **monitoria diária automatizada no Microsoft Teams** foi a primeira solução, voltada à identificação e comunicação de desvios de eventos GA4. A **Genie de monitoria surgiu posteriormente como um desdobramento dessa experiência**, para apoiar a exploração analítica e o aprofundamento das ocorrências por perguntas em linguagem natural.
+
+A Genie foi desenvolvida em **outro notebook**. Portanto, ela **não é uma etapa do job diário de envio de alertas**; trata-se de uma solução posterior e complementar. A relação descrita aqui é de **evolução funcional do projeto**, sem afirmar que ambos compartilham exatamente as mesmas tabelas ou a mesma implementação.
+
+Leia também o [estudo sobre Genie Agents](../genie-analytics/).
+
+## Monitoria horária: protótipo não mantido
 
 Também foi desenvolvida e agendada uma **versão de acompanhamento hora a hora**. Ela **não foi mantida em operação** porque a base GA4 não disponibilizava atualizações suficientemente confiáveis nessa frequência. A versão utilizada foi a **diária**.
 
