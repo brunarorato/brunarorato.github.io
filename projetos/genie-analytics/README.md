@@ -39,7 +39,7 @@ Antes da Genie, a identificação do contexto de uma anomalia podia envolver div
 
 Isso proporcionou **maior agilidade para diagnosticar e encaminhar ocorrências**, com menos perguntas repetidas e informações mais completas para a equipe responsável.
 
-**Impacto estimado: aproximadamente 75% de redução no tempo de diagnóstico inicial**, conforme avaliação retrospectiva da autora sobre as investigações antes e depois do uso da Genie. Trata-se de uma **estimativa operacional ilustrativa, não de um indicador aferido por logs ou por amostras cronometradas**. Não deve ser interpretada como redução comprovada do tempo total de correção de incidentes.
+**Impacto estimado: aproximadamente 75% de redução no tempo de diagnóstico inicial.** Trata-se de uma **estimativa operacional, não de um indicador aferido por logs ou por amostras cronometradas**. Não deve ser interpretada como redução comprovada do tempo total de correção de incidentes.
 
 Ambas as soluções utilizam **a mesma origem de dados GA4**, mas foram construídas em **notebooks diferentes**, com transformações e objetivos distintos. O notebook da monitoria diária calcula os alertas e prepara o envio para o Teams; o notebook da Genie prepara a camada analítica e configura o agente para análises em linguagem natural. O compartilhamento da origem não significa que utilizem as mesmas tabelas intermediárias nem que exista integração automática entre os notebooks.
 
