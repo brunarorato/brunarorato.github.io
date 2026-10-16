@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alerta GA4 — demonstração fictícia</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7f8;color:#203138;padding:28px}
+main{max-width:1000px;margin:auto;background:#fff;border-radius:14px;padding:28px;box-shadow:0 4px 18px #0001}
+h1{font-size:22px;margin:0 0 8px}p{line-height:1.5;color:#52646d}.resumo{background:#e8f4f2;padding:12px;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin-top:18px;font-size:14px}th,td{padding:12px;border-bottom:1px solid #e2e8eb;text-align:left}
+th{background:#ebf0f2}.queda{font-weight:bold;color:#ad342b}.alta{font-weight:bold;color:#bd6a04}
+@media(max-width:700px){main{padding:16px}table{font-size:11px}th,td{padding:5px}body{padding:8px}}
+</style></head>
+<body><main>
+<h1>Monitoria diária de eventos GA4 — exemplo fictício</h1>
+<p>Exemplo visual de mensagem HTML gerada a partir da saída simulada de uma consulta SQL. Não contém dados, códigos ou links internos da empresa. Não realiza envios reais.</p>
+<p><strong>Comparação:</strong> D-1 vs D-8 (mesmo dia da semana) · <strong>Limiar:</strong> desvio acima de 20% em módulo.</p>
+<div class="resumo"><strong>3 alertas</strong><p>Crônico (4 dias): 1 · Inédito: 1 · Voltou: 1</p></div>
+<table><thead><tr><th>Dispositivo</th><th>Evento</th><th>D-1</th><th>D-8</th><th>Var.</th><th>Status</th><th>Radar</th></tr></thead>
+<tbody><tr><td>Desktop</td><td>view_item</td><td>5,500</td><td>10,000</td><td>-45.0%</td><td class='queda'>ABAIXO</td><td>Crônico (4 dias)</td></tr><tr><td>App</td><td>add_to_cart</td><td>6,500</td><td>5,000</td><td>+30.0%</td><td class='alta'>ACIMA</td><td>Inédito</td></tr><tr><td>Desktop</td><td>purchase</td><td>850</td><td>1,200</td><td>-29.2%</td><td class='queda'>ABAIXO</td><td>Voltou</td></tr></tbody></table>
+<p><small>Material público educacional · A classificação histórica foi simulada neste arquivo; sua regra detalhada não está implementada neste script.</small></p>
+</main></body></html>
