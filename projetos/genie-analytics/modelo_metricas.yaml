@@ -1,0 +1,22 @@
+# ESPECIFICAÇÃO DIDÁTICA: representa semanticamente uma Metric View.
+# Não é YAML operacional de uma Metric View do Databricks.
+# Tabelas, dimensões e métricas são fictícias.
+modelo: ecommerce_sintetico
+fonte: pedidos_demonstracao
+grao: um_registro_por_pedido
+dimensoes:
+  - nome: data_aprovacao
+    descricao: Data usada nas análises de pedidos
+  - nome: perfil_cliente
+    descricao: Classificação simplificada em Novo ou Recorrente
+medidas:
+  - nome: receita_liquida
+    expressao: SUM(valor_liquido)
+  - nome: total_pedidos
+    expressao: COUNT(DISTINCT pedido_id)
+  - nome: ticket_medio
+    expressao: SUM(valor_liquido) / NULLIF(COUNT(DISTINCT pedido_id), 0)
+politicas:
+  - Usar a mesma referência de data em todas as comparações
+  - Não inferir dados ausentes
+  - Não consultar fontes externas ao escopo autorizado
