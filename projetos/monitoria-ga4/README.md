@@ -1,46 +1,61 @@
-# Monitoria de eventos GA4 — estudo de caso
+# Monitoria diária de eventos GA4 — estudo de caso
 
-**Área:** Data Analytics · Observabilidade · Automação  
-**Tecnologias:** Databricks SQL, Python, HTML, Power Automate, Microsoft Teams, GA4
+**Área:** Data Analytics · Qualidade de dados · Observabilidade · Automação  
+**Tecnologias do projeto profissional:** Databricks SQL, Python, HTML, Power Automate, Microsoft Teams, GA4
 
-> **Projeto demonstrativo.** Os dados e códigos deste repositório foram reconstruídos para fins educacionais. Não são exportações do ambiente corporativo nem reproduções do código original.
+> **Material público demonstrativo.** Arquitetura e responsabilidades descritas com base na atuação profissional; os códigos e números desta pasta foram reconstruídos com informações fictícias. **Não há notebook original, tabelas empresariais, URLs internas nem credenciais.**
 
-## Desafio
-Variações inesperadas no volume de eventos digitais podem prejudicar a leitura da jornada de compra e atrasar a identificação de falhas de instrumentação. Era necessário detectar mudanças relevantes e encaminhá-las de forma organizada.
+## Contexto e objetivo
+Eventos digitais podem deixar de registrar interações corretamente ou apresentar quedas e altas abruptas de volume. Uma detecção tardia compromete a leitura do funil de conversão e a atuação das equipes responsáveis. O objetivo foi construir um **alerta diário automatizado**, com indicadores de desvios e sinais de persistência.
 
-## Minha contribuição no projeto profissional
-- Preparação de uma base intermediária de eventos e análise de volumes por data, hora, evento e dispositivo.
-- Comparação do dia anterior (**D-1**) com o mesmo dia da semana anterior (**D-8**), reduzindo parte do efeito do dia da semana.
-- Sinalização de desvios acima de **+20%** e abaixo de **-20%**.
-- Criação de um **Radar de Persistência**, que diferencia desvios inéditos, recorrentes, agravados, invertidos e que reapareceram.
-- Geração de uma mensagem HTML com análise e envio automatizado ao Microsoft Teams por meio de Python e Power Automate.
-- Documentação da operação, das regras e da evolução do projeto.
+## Responsabilidades e implementação profissional
+1. **Base analítica:** organização dos volumes de eventos por data, hora, evento e dispositivo. A preparação do notebook inclui carga inicial e atualização das partições/dias recentes.
+2. **Regras de detecção em SQL:** comparação de **D-1 com D-8**, o mesmo dia da semana anterior. Um evento/dispositivo passa a ser sinalizado quando o desvio absoluto é **superior a 20%**.
+3. **Radar de Persistência em SQL:** análise histórica dos desvios, com categorias **Inédito**, **Inverteu**, **Escalou**, **Crônico** e **Voltou**. O histórico considera até 30 dias e também compara a intensidade do desvio recente.
+4. **Apresentação e envio em Python:** consumo do resultado SQL, organização de uma tabela HTML, elaboração de destaques analíticos e envio do conteúdo para um fluxo do **Power Automate**, com notificação no **Microsoft Teams**.
+5. **Documentação e manutenção:** regras de negócio, tratamentos, interpretação dos alertas e ajustes evolutivos.
 
-## Arquitetura conceitual
+## Arquitetura — monitoria diária
 ~~~mermaid
 flowchart LR
-    A[Eventos digitais GA4] --> B[Preparação com SQL]
-    B --> C[Base analítica de eventos]
-    C --> D[Comparações D-1 vs D-8]
-    D --> E[Radar de persistência]
-    E --> F[Python gera alerta HTML]
-    F --> G[Power Automate]
-    G --> H[Microsoft Teams]
+    A[Eventos GA4] --> B[Preparação de volumes no Databricks]
+    B --> C[Comparação D-1 versus D-8 em SQL]
+    C --> D[Radar histórico em SQL]
+    D --> E[Python formata a mensagem HTML]
+    E --> F[Power Automate]
+    F --> G[Microsoft Teams]
 ~~~
 
-## Demonstração deste repositório
-- [monitoria_demo.py](monitoria_demo.py): exemplo **executável** de comparação semanal e identificação de desvios.
-- [dados_ficticios.csv](dados_ficticios.csv): dados sintéticos para executar o exemplo.
-- [radar.md](radar.md): explicação conceitual das categorias de persistência.
+## Três iniciativas distintas
+**Genie de eventos** é um projeto separado, voltado a consultas analíticas em linguagem natural com Metric Views e agentes de IA; não é o mesmo notebook que executa a monitoria.
 
-Execute localmente (somente Python 3, sem dependências extras):
+Também foi desenvolvida e agendada uma **versão de acompanhamento hora a hora**. Ela **não foi mantida em operação** porque a base GA4 não disponibilizava atualizações suficientemente confiáveis nessa frequência. A versão utilizada foi a **diária**.
+
+A existência de volumes agrupados por hora na preparação de dados **não significa que a análise e o envio do alerta fossem horários**: a regra final deste notebook compara dias.
+
+## Arquivos demonstrativos
+| Arquivo | O que demonstra |
+|---|---|
+| [monitoria_sql_demo.sql](monitoria_sql_demo.sql) | Consulta sintética Databricks SQL para volume por evento/dispositivo, comparação semanal e status de outlier |
+| [dados_ficticios.csv](dados_ficticios.csv) | Pequena entrada sintética para entender os volumes diários |
+| [resultados_sql_ficticios.csv](resultados_sql_ficticios.csv) | Resultado sintético que representa a saída da etapa SQL, incluindo Radar ilustrativo |
+| [monitoria_demo.py](monitoria_demo.py) | **Somente a etapa de apresentação em Python:** transforma o resultado sintético da consulta em uma mensagem HTML |
+| [alerta_exemplo.html](alerta_exemplo.html) | [Visualizar a mensagem de alerta fictícia no navegador](https://brunarorato.github.io/projetos/monitoria-ga4/alerta_exemplo.html) |
+| [radar.md](radar.md) | Conceitos e limites da classificação histórica |
+
+Execute localmente, se desejar:
 
 ~~~bash
 python projetos/monitoria-ga4/monitoria_demo.py
 ~~~
 
-## Aprendizados e valor de negócio
-O projeto conecta qualidade de instrumentação, consultas analíticas, automação operacional e encaminhamento de incidentes. A detecção precoce de falhas contribuiu para reduzir a exposição do negócio a perdas potenciais, mas este repositório **não publica estimativas financeiras internas**.
+A execução recria o arquivo HTML localmente. **Não há envio de mensagens, acesso a dados reais nem dependências de terceiros.**
 
-## Limites da demonstração
-O código simplificado abaixo não reproduz o pipeline produtivo, a lógica histórica completa do radar ou a integração real com Teams. Não há tabelas, credenciais, URLs ou métricas corporativas.
+## O que esta demonstração não implementa
+- Pipeline real de ingestão e atualização no Databricks.
+- Lógica completa de classificação histórica dos 30 dias (os rótulos do CSV são **ilustrativos**).
+- Comunicação real com o Power Automate ou Microsoft Teams.
+- A versão hora a hora, que não foi mantida por limitação de atualização da origem.
+
+## Impacto e aprendizado
+A solução contribuiu para antecipar a identificação de anomalias na instrumentação de eventos, estruturar a comunicação operacional e acelerar a triagem. O projeto ilustra trabalho **de ponta a ponta**, conectando dados, regras analíticas, classificação histórica, mensagens automatizadas e suporte ao negócio. Não são divulgados resultados financeiros internos.
