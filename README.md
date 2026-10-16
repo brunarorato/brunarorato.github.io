@@ -20,3 +20,15 @@ selecione **Deploy from a branch**, **main**, **/(root)** e salve.
 
 Os estudos de caso foram generalizados para fins de apresentação profissional.
 Não incluem arquivos, dados, nomes de tabelas, códigos ou telas internas da empresa.
+
+## Projetos técnicos no GitHub
+
+Os estudos de caso do [portfólio online](https://brunarorato.github.io) têm documentação complementar e exemplos reconstruídos com dados fictícios:
+
+| Projeto | Material público |
+|---|---|
+| Monitoria automatizada de eventos GA4 | [README, Python e dados de teste](projetos/monitoria-ga4/) |
+| Databricks Genie Agents | [README, SQL e demonstração da camada de métricas](projetos/genie-analytics/) |
+| Power BI ponta a ponta — PDP e Vitrines | [README, SQL, DAX e modelagem conceitual](projetos/powerbi-pdp-vitrines/) |
+
+**Importante:** os códigos demonstrativos, números, fontes e arquiteturas foram generalizados. Não são exports, backups, capturas ou código-fonte corporativo.
