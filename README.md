@@ -27,7 +27,7 @@ Os estudos de caso do [portfólio online](https://brunarorato.github.io) têm do
 
 | Projeto | Material público |
 |---|---|
-| Monitoria automatizada de eventos GA4 | [README, Python e dados de teste](projetos/monitoria-ga4/) |
+| Monitoria diária GA4 → evolução para Genie de monitoria | [README, SQL, Python e alerta HTML demonstrativo](projetos/monitoria-ga4/) |
 | Databricks Genie Agents | [README, SQL e demonstração da camada de métricas](projetos/genie-analytics/) |
 | Power BI ponta a ponta — PDP e Vitrines | [README, SQL, DAX e modelagem conceitual](projetos/powerbi-pdp-vitrines/) |
 
