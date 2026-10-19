@@ -4,7 +4,7 @@ Portfólio profissional com estudos de caso sobre:
 
 - Monitoria automatizada de eventos GA4 e observabilidade digital
 - Databricks Genie Agents e métricas de negócio
-- Genie de Perfil de Clientes — Customer Analytics criado por iniciativa própria, com validação e certificação concluídas no novo modelo de governança da área
+- Genie de Perfil de Clientes — Customer Analytics criado por iniciativa própria, com **100% de validação e certificação concluídas** no novo modelo de governança da área (não é índice de acerto do modelo)
 - Validação iterativa de respostas geradas por IA
 - Engenharia analítica e dashboards Power BI de ponta a ponta
 - Documentação técnica e governança
