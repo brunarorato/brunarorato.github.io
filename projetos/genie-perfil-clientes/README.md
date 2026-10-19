@@ -53,8 +53,17 @@ A Genie passou a apoiar investigações de clientes novos, recorrentes e pré-ch
 
 Respostas preliminares em análises comerciais apresentaram inconsistências de segmentação e valores durante os testes; isso motivou **revisão de instruções e consultas SQL**, não uma afirmação de resultados financeiros já homologados.
 
+## Certificação e reconhecimento interno
+
+**100% de validação e certificação concluídas:** comunicados internos de Data Intelligence registraram a evolução de **95% de validação em setembro** para **100% de certificação em outubro**, destacando a Genie de Perfil de Clientes como a **primeira Genie certificada no novo modelo de governança da área**.
+
+O projeto também foi apresentado em newsletters internas sobre iniciativas de Analytics e Inteligência de Dados. São evidências de **conclusão do processo de governança e de visibilidade interna**; o percentual de certificação **não** indica 100% de precisão das respostas nem ganho financeiro.
+
+Nenhuma imagem, nome de sistema interno, link restrito ou dado empresarial foi publicado para documentar esses marcos.
+
 ## Resultados e impacto — o que é defensável
 - **Nova capacidade analítica criada por iniciativa própria:** uma visão de Customer Analytics que não estava sendo acompanhada ativamente.
+- **Certificação de 100% concluída** no processo de validação e governança da área, conforme divulgação interna.
 - **Acesso disponibilizado mediante solicitação** a pessoas de Marketing e da Diretoria de Canais.
 - **Maior capacidade de explorar análises sazonais, segmentadas e por origem de marketing**, inclusive questões antes difíceis de obter em uma consulta manual.
 - **Reaproveitamento da tabela de calendário comercial** em diferentes construções analíticas.
